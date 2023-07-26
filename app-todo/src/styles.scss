@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import './dist/scss/variables.scss';
+// fazer a importação do google fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    font-weight: 400;
+}
+
+body{
+    background: $primary-background-color;
+}
+
+// classe
+.container{
+    width: 350px;
+    margin: 50px auto;
+}
