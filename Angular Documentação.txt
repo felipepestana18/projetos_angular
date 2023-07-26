@@ -1,0 +1,103 @@
+
+Angular +2 
+
+Instalação do Angular +2
+
+- NodeJS
+https://nodejs.org/en/download
+
+- Angular
+https://angular.io/guide/setup-local
+ng help para ver a versão do angular e se foi instalado
+
+- Angular CLI
+
+ng help - tem todas as opçãoes
+ng new - para criar a  aplicação com Angular
+ng serve - para rodar a aplicação do Angular ou com abreviação ng s
+
+- Estrutura do Angular
+
+- package.json coloco as extensãoes de terceiro
+- angular.json é o arquivo principal na onde eu consigo colocar o componete principal para iniciar.
+- app é a pasta onde vai ficar todos os componetes
+- assets é na onde eu posso colocar as imagens
+- app-routing-modulo.ts onde eu consigo fazer as rotas
+- app.module.ts na onde eu coloco os componetes e a rotas
+
+
+- Estrutura de um componete
+
+component.html - é o arquivo que eu coloco o HTML
+component.ts - é o arquivo onde eu coloco o TS
+component.scss - é o arquivo na onde eu coloco o CSS
+ - para pedir ajuda para criar um novo componete ng generate --help
+ - ng g c title para criar um novo componete através do terminal
+    g -> generate
+	c -> title
+
+- Ciclo de vida do Angular
+
+ngOnInit() ->  este evento é iniciliziado quando angular exibir a primeira vez na propiedades vinculados aos dados
+ngOnChanges() -> este evento é executado quando algum campo de entrada é alterado
+	ngDoCheck() -> este evento vai disparado quando for clicado
+	 - ngAfterContentInit() -> este evento vai invocado quando tiver uma projeção de um valor
+	 - ngAfterContentChecked() -> quando tiver uma alteração no componete, ele vai fazer a verificação
+	 - ngAfterViewInit() -> quando todos os componete for inicializado tudo
+	 - ngAfterViewChecked() -> quando tiver alguma alteração para invocar
+ngOnDestroy() -> quando tem uma ação para esconder algo da tela para esconder
+
+
+Diretivas
+Interpolação <h1> {{title}} </h1>
+Property Binding [disabled] quando tem conchetes[]
+Event Bindig (click)="calc()"
+Two-way binding  [(ngModlel)]="nome"
+
+
+
+Diretivas
+As diretivas são classes que adicionam comportamento adicional aos elementos em seu aplicativos Angular, Manipular o DOM
+
+
+Diretivas de atributo
+	Que alteram a aparência ou comportamento de um elemento, componente ou outra diretiva.
+NgClass - adiciona e remove um conjunto de classes CSS.
+NgStyle - adiciona e remove um conjunto de estilo HTML.
+NgModel - adiciona vinculação de dados bidirecional a elemento de um formulário HTML. (precisa importar do angular)
+
+Diretivas Estrututais
+	Eles moldam ou remodelam a estrutura do DOM, adicionando, removendo e manipulando os elementos do host aos quais estão enexados.
+NgIf - Condicionalmente cria ou descarta visualizações do modelo.
+NgFor - Repete um nó para cada item de uma lista.
+NgSwitch - um conjunto de diretivas que alteram entre visões alternativas.
+
+ng-template - criar um atributo HTML limpo vai fazer verificação junto ngIf antés do DOM carregar faz ficar mais leve consegue trabalhar com condição o ngFor e diferente a sintaxe
+ng-content 	- é um componente que eu consigo mudar os valores, posso utilizar em várias telas e consigo pegar o valor utilizando o select*h1 assim por diante
+Pipper | 	- uppercaser deixar tudo maiusculo, e também consigo formatar data com pipper {{date | date: 'dd/MM/yyyy'}}
+
+Modules
+
+Um module é um mecanismo para agrupar componet, diretivas, pipes e serviços relacionados, de forma a combinar com outros modulos para criar um aplicativos.
+Uma aplicação angular pode ser pensanda como um quebra-cabeça, onde cada bloco tem como objetivo fornecer uma funcionalidade ou recurso especifico
+
+ngModule({
+	declarations: [] -> todos os componetes do angular precisar ser declarado aqui para funcionar
+	imports: [] -> alguma diretiva que precisar de importação para usar por exemplo ngModel. (nome da classe que precisar ser importada)
+	exports: [] -> para exportar algum componete e também necessário declarar no declarations. (nome do componente que vai ser exportado)
+	providers: [] -> utilizando para chama as requisição http e também para fazer injeção de dependecia.
+	bootstrap: [] -> na onde eu utilizo o arquivo bootstrap que pode ser utilizado em vários lugares.	
+})
+
+para criar um module
+ng g m shared
+ng g c shared/newComponent -> para criar um componete dentro de um módulo novo.
+
+Comunicação de dados entre os componetes
+
+@Input -> Entrada de dados
+@Output -> Saída de dados
+
+
+
+
