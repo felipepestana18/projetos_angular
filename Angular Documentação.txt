@@ -98,6 +98,9 @@ Comunicação de dados entre os componetes
 @Input -> Entrada de dados
 @Output -> Saída de dados
 
-
+para criar um services para comunicar com meu back-end
+	ng g s /services/foodList
+	
+Comunicação de componentes via services n g c /shared/food-add
 
 
